@@ -1,13 +1,13 @@
 /* 1. Icona fuoco sopra il numero nella prima stat card */
 .stats-container .stats-grid:first-child .stat-number::before {
-  content: "🔥";
+  content: "🔥"; /*seleziona il primo elemento con classe .stats-grid che è figlio di .stats-container*/
   display: block;
   font-size: 1.4rem;
-  margin-bottom: 4px;
+  margin-bottom: 4px; /*aggiunge spazio sotto il fuoco.*/
 }
 
 /* 2. Terza stat card: gradiente blu-viola + testo bianco */
-.stats-container .stats-grid:nth-child(3) {
+.stats-container .stats-grid:nth-child(3) { /*seleziona terzo figlio (3) intende e colori*/
   background: linear-gradient(135deg, #4c6fff, #8b5cf6);
   color: #ffffff;
 }
@@ -18,13 +18,13 @@
 }
 
 /* 3. Hover su tutte le stat cards */
-.stats-container .stats-grid {
+.stats-container .stats-grid { 
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.stats-container .stats-grid:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+.stats-container .stats-grid:hover { /* attiva quando passi il mouse (hover come visto oggi)*/
+  transform: translateY(-5px); /*sposta sopra */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18); /*ombra che sembra "sollevata" (da rivedere meglio)*/
 }
 
 /* Secondo workout-plan: bordo arancione e sfondo giallo chiaro */
