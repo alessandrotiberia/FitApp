@@ -1,0 +1,10 @@
+/* inerisco emoji della fiamma */
+.statnumber::before { 
+    content:🔥;
+	
+}
+
+/* stats-grid classed che richiamo > figlio diretto */
+.stats-grid>last-child{
+background-color: blue;
+}
