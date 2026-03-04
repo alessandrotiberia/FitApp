@@ -1,26 +1,124 @@
-/* inerisco emoji della fiamma */
-.stats-grid::before {
+/* 1. Icona fuoco sopra il numero nella prima stat card */
+.stats-container .stats-grid:first-child .stat-number::before {
   content: "🔥";
   display: block;
-  font-size: 2rem;
-  margin-bottom: 0.3rem;
+  font-size: 1.4rem;
+  margin-bottom: 4px;
 }
 
-/* stats-grid classed che richiamo > figlio diretto */
-.stats-grid>last-child{
-background-color: blue;
+/* 2. Terza stat card: gradiente blu-viola + testo bianco */
+.stats-container .stats-grid:nth-child(3) {
+  background: linear-gradient(135deg, #4c6fff, #8b5cf6);
+  color: #ffffff;
 }
-.span.stats-grid>:last-child {
-    color: blue;
-}
-.article.workout-plan{
-    color: yellow;
-} 
 
-.divstyle>:last-child{
-background-color: green;
-
+.stats-container .stats-grid:nth-child(3) .stat-number,
+.stats-container .stats-grid:nth-child(3) .stat-label {
+  color: #ffffff;
 }
-.divstyle>:first-child {
-    
+
+/* 3. Hover su tutte le stat cards */
+.stats-container .stats-grid {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stats-container .stats-grid:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+/* Secondo workout-plan: bordo arancione e sfondo giallo chiaro */
+.workout-section .workout-plan:nth-child(3) {
+  /* in .workout-section: h2 è il primo figlio, poi 1°, 2°, 3° article */
+  border-left: 5px solid #ff9800;
+  background-color: #fff9e6;
+}
+/* Primo e ultimo esercizio: bordo e sfondo verde chiaro */
+.exercise-item:first-child,
+.exercise-item:last-child {
+  border-left-color: #22c55e;
+  background-color: #ecfdf3;
+}
+
+/* Fulmine negli esercizi pari (2° e 4°) */
+.exercise-item:nth-child(2) .exercise-name::before,
+.exercise-item:nth-child(4) .exercise-name::before {
+  content: "⚡ ";
+}
+/* Focus blu con ombra e transizione */
+.goal-input-group input,
+.goal-input-group select {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.goal-input-group input:focus,
+.goal-input-group select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.35);
+}
+
+/* Bottone: hover con sollevamento, cambio colore e ombra blu */
+.save-btn {
+  transition: transform 0.15s ease,
+              box-shadow 0.15s ease,
+              background-color 0.15s ease;
+}
+
+.save-btn:hover {
+  transform: translateY(-2px);
+  background-color: #5565e0; /* leggermente più scuro */
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.4);
+}
+/* Metti il testo 65% dentro la barra */
+.progress-section .progress-bar {
+  position: relative;
+}
+
+/* mostriamo 65% dentro il fill */
+.progress-fill::after {
+  content: "65%";
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+/* Hover: sfondo più scuro e testo blu */
+.nav-footer .nav-item {
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.nav-footer .nav-item:hover {
+  background-color: #1f2933;
+  color: #2563eb;
+}
+
+/* Primo link sempre attivo */
+.nav-footer .nav-item:first-child {
+  background-color: #111827;
+  color: #2563eb;
+}
+.quote-box::before,
+.quote-box::after {
+  content: "\"";
+  position: absolute;
+  font-size: 48px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 0.2;
+}
+
+/* in alto a sinistra */
+.quote-box::before {
+  top: 4px;
+  left: 10px;
+}
+
+/* in basso a destra */
+.quote-box::after {
+  bottom: -6px;
+  right: 14px;
 }
