@@ -1,10 +1,26 @@
 /* inerisco emoji della fiamma */
-.statnumber::before { 
-    content:🔥;
-	
+.stats-grid::before {
+  content: "🔥";
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
 }
 
 /* stats-grid classed che richiamo > figlio diretto */
 .stats-grid>last-child{
 background-color: blue;
+}
+.span.stats-grid>:last-child {
+    color: blue;
+}
+.article.workout-plan{
+    color: yellow;
+} 
+
+.divstyle>:last-child{
+background-color: green;
+
+}
+.divstyle>:first-child {
+    
 }
